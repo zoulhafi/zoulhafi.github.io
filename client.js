@@ -1,4 +1,4 @@
-const 	connection = new WebSocket('wss://api.oulhafiane.me:443');
+const 	connection = new WebSocket('wss://api.demo-oulhafiane.me:443');
 const 	loginPage = document.querySelector('#login-page');
 const 	usernameInput = document.querySelector('#username');
 const 	loginButton = document.querySelector('#login');
