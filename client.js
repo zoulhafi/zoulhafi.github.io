@@ -37,7 +37,7 @@ function setupPeerConnection() {
   yourConnection.onicegatheringstatechange = (event) => { console.log("*****ICe mine gathering : "+ yourConnection.iceGatheringState); };
 
   yourConnection.onnegotiationneeded = () => {
-  	console.log("*** creation Offer ****");
+  	console.log("*** creation Offer ***");
   	yourConnection.createOffer().then(offer => {
   		console.log("*** creatiiiing Offer 1111 ***");
     	return yourConnection.setLocalDescription(offer);
@@ -61,6 +61,7 @@ function startMedia()
 	    yourVideo.srcObject = stream;
 	    stream.getTracks().forEach(track => yourConnection.addTrack(track, stream));
 	  }).catch( (error) => {
+		console.log("Kayn error hna");
 	    console.log(error);
 	  });
 	} else {
