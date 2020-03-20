@@ -65,9 +65,9 @@ function setupPeerConnection() {
 }
 
 function startMedia() {
-  console.log(hasUserMedia())
+  console.log("Has user media ? " + hasUserMedia())
   if (hasUserMedia()) {
-    console.log(navigator.mediaDevices)
+    console.log(navigator.mediaDevices.getUserMedia({ video: true, audio: false }))
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
       .then(stream => {
